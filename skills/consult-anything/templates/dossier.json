@@ -1,0 +1,252 @@
+{
+  "_example": "Example data for a fictional business. Replace everything with the user's own data.",
+  "schema": "consult-anything/dossier/v1",
+  "meta": {
+    "created": "2026-11-07",
+    "updated": "2026-11-07",
+    "language": "nl",
+    "phase": 2,
+    "follow_up_date": "2026-12-19"
+  },
+  "business": {
+    "summary": "Installation company, 12 people, residential heat pumps",
+    "sells": "Heat pump installation and maintenance",
+    "customers": "Homeowners in the region",
+    "revenue_model": "Project price plus maintenance contracts",
+    "team_size": 12,
+    "label": "seen",
+    "quote": "We install heat pumps, we're with twelve people"
+  },
+  "people_heard": [
+    {
+      "role": "Owner",
+      "how": "chat"
+    },
+    {
+      "role": "Planner",
+      "how": "questionnaire"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Leads",
+      "owner": "Owner",
+      "tool": "Website form, email",
+      "throughput_per_week": {
+        "value": 40,
+        "label": "seen",
+        "quote": "We get about 40 inquiries a week through the website and email"
+      },
+      "queue": {
+        "value": 0,
+        "label": "seen",
+        "quote": "Inquiries come in and go straight to my inbox"
+      },
+      "lead_time_days": null,
+      "work_time_hours": null,
+      "rework_pct": null,
+      "handoffs": 1
+    },
+    {
+      "name": "Quote",
+      "owner": "Owner",
+      "tool": "Word template",
+      "throughput_per_week": {
+        "low": 8,
+        "high": 10,
+        "label": "inferred"
+      },
+      "queue": {
+        "value": 25,
+        "label": "seen",
+        "quote": "There are about 25 people waiting for a quote right now"
+      },
+      "lead_time_days": {
+        "value": 5,
+        "label": "inferred"
+      },
+      "work_time_hours": {
+        "value": 1.5,
+        "label": "inferred"
+      },
+      "rework_pct": {
+        "value": 10,
+        "label": "inferred"
+      },
+      "handoffs": 2
+    },
+    {
+      "name": "Installation",
+      "owner": "Installers",
+      "tool": "Planning board",
+      "throughput_per_week": {
+        "value": 12,
+        "label": "seen",
+        "quote": "The teams can do 12 installations a week"
+      },
+      "queue": {
+        "value": 3,
+        "label": "seen",
+        "quote": "Three jobs are planned but not started"
+      },
+      "lead_time_days": {
+        "value": 2,
+        "label": "seen",
+        "quote": "An installation takes two days"
+      },
+      "work_time_hours": {
+        "value": 12,
+        "label": "seen",
+        "quote": "Two men, about six hours each"
+      },
+      "rework_pct": {
+        "value": 5,
+        "label": "inferred"
+      },
+      "handoffs": 1,
+      "capacity_per_week": {
+        "value": 12,
+        "label": "seen",
+        "quote": "The teams can do 12 installations a week"
+      }
+    },
+    {
+      "name": "Invoicing",
+      "owner": "Office",
+      "tool": "Accounting software",
+      "throughput_per_week": {
+        "value": 15,
+        "label": "seen",
+        "quote": "The office can easily invoice 15 a week"
+      },
+      "queue": {
+        "value": 2,
+        "label": "seen",
+        "quote": "Usually two invoices are waiting"
+      },
+      "lead_time_days": {
+        "value": 3,
+        "label": "seen",
+        "quote": "Invoices go out within three days"
+      },
+      "work_time_hours": {
+        "value": 0.3,
+        "label": "seen",
+        "quote": "An invoice takes about twenty minutes"
+      },
+      "rework_pct": null,
+      "handoffs": 1
+    }
+  ],
+  "money": {
+    "value_per_order": {
+      "value": 9500,
+      "currency": "EUR",
+      "label": "seen",
+      "quote": "An average job is around 9,500 euros"
+    },
+    "leaks": [
+      {
+        "description": "Leads that never receive a quote",
+        "per_month": {
+          "low": 20000,
+          "high": 40000,
+          "currency": "EUR",
+          "label": "inferred",
+          "basis": "2 to 4 lost leads a month at 9,500 per job and a typical win rate"
+        },
+        "label": "inferred"
+      }
+    ]
+  },
+  "systems": [
+    "Website form",
+    "Email",
+    "Word",
+    "Planning board",
+    "Accounting software"
+  ],
+  "goal": {
+    "metric": "Quotes sent within 2 working days",
+    "target": "90%",
+    "date": "2027-02-01",
+    "label": "seen",
+    "quote": "I want every customer to have a quote within two days"
+  },
+  "baseline": {
+    "date": "2026-11-07",
+    "metrics": [
+      {
+        "metric": "Quotes per week",
+        "value": 9,
+        "label": "inferred"
+      },
+      {
+        "metric": "Median days to quote",
+        "value": 5,
+        "label": "inferred"
+      }
+    ]
+  },
+  "bottleneck": {
+    "step": "Quote",
+    "type": "throughput_and_waiting",
+    "evidence": "Lowest throughput (8 to 10 per week) with 25 waiting; leads arrive at 40 per week",
+    "label": "inferred",
+    "confirmed_by_user": true
+  },
+  "root_cause": {
+    "method": "five_whys",
+    "chain": [
+      "Quotes take five days",
+      "The owner prepares every quote",
+      "Only the owner knows the prices",
+      "There is no price list"
+    ],
+    "actionable_cause": "No price list and no quote template"
+  },
+  "tasks": [
+    {
+      "task": "Build a price list for the five most sold configurations",
+      "ai_fit": 3,
+      "money_impact": 5,
+      "existing_system": true,
+      "effort": "M"
+    },
+    {
+      "task": "Quote template with AI first draft, planner prepares, owner approves",
+      "ai_fit": 5,
+      "money_impact": 5,
+      "existing_system": true,
+      "effort": "S"
+    }
+  ],
+  "solution": {
+    "chosen": "Price list plus quote template; planner drafts, owner approves daily at 16:00",
+    "alternatives": [
+      "Quoting software",
+      "Hire an estimator"
+    ],
+    "non_ai_parts": [
+      "Decision rule: owner approves, does not build"
+    ]
+  },
+  "tests": [
+    {
+      "run": 1,
+      "score": 8,
+      "note": ""
+    }
+  ],
+  "quotes_external_tools": [],
+  "routing": {
+    "route": "consult_anything",
+    "reason": "Throughput bottleneck in quoting"
+  },
+  "follow_ups": [
+    {
+      "date": "2026-12-19",
+      "metrics": []
+    }
+  ]
+}

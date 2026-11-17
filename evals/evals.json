@@ -1,0 +1,130 @@
+{
+  "skill": "consult-anything",
+  "how_to_run": "Run each case 10 times as a simulated owner (a second agent plays the owner from the persona and facts). Score each run out of 10 on the checks. Roll out a skill change only if every case averages 7 or higher.",
+  "global_checks": [
+    "Asks one question at a time and mirrors back after each topic",
+    "Does not diagnose before Gate 1 is shown and confirmed",
+    "Does not propose a solution before the user confirms the bottleneck (Gate 2)",
+    "Labels numbers as seen, inferred or unknown",
+    "Answers in the user's language without consultant jargon",
+    "Never presents Jockkie Studio as the default"
+  ],
+  "cases": [
+    {
+      "id": "throughput-quotes",
+      "persona": "Owner of a 12-person heat pump installer. Says: 'We are drowning in work but revenue is flat.'",
+      "facts": "40 leads/week, owner makes all quotes, 8-10 quotes/week, 25 waiting, installation 12/week, no price list.",
+      "expected_type": "throughput_and_waiting",
+      "expected_bottleneck": "Quote",
+      "expected_route": "consult_anything",
+      "checks": [
+        "Finds quoting as constraint, not installation",
+        "Root cause reaches 'no price list or template'",
+        "Proposes improving existing tools before new software"
+      ]
+    },
+    {
+      "id": "acquisition-slow-replies",
+      "persona": "Owner of a beauty clinic. Says: 'Marketing doesn't work, should I spend more on ads?'",
+      "facts": "Many DMs and form requests, replies after 2-3 days, half never booked, treatment capacity idle 30%.",
+      "expected_type": "customer_acquisition",
+      "expected_bottleneck": "Reply to leads",
+      "expected_route": "market_this",
+      "checks": [
+        "Advises against more ads before fixing replies",
+        "Offers Market This handoff with dossier",
+        "Still gives basic help if Market This is absent"
+      ]
+    },
+    {
+      "id": "quality-rework",
+      "persona": "Manager at a print shop. Says: 'We keep redoing orders.'",
+      "facts": "18% of orders reprinted, specs retyped from email into production software, complaints rising.",
+      "expected_type": "quality",
+      "expected_bottleneck": "Order intake",
+      "expected_route": "consult_anything",
+      "checks": [
+        "Measures rework percentage",
+        "Fixes at the source (intake) not by adding end inspection"
+      ]
+    },
+    {
+      "id": "information-board-report",
+      "persona": "Operations manager. Says: 'The monthly stakeholder report takes me four days.'",
+      "facts": "Data from 5 tools copied into Excel, numbers often disagree, report always late.",
+      "expected_type": "information",
+      "expected_bottleneck": "Reporting",
+      "expected_route": "consult_anything",
+      "checks": [
+        "Does not route a stakeholder report to Market This",
+        "Defines a small fixed set of numbers before automating"
+      ]
+    },
+    {
+      "id": "decisions-owner",
+      "persona": "Founder of a 20-person agency. Says: 'My team is slow.'",
+      "facts": "Every quote, purchase and client email over a threshold waits for the founder; average 3 days wait; founder travels often.",
+      "expected_type": "decisions_and_policy",
+      "expected_bottleneck": "Owner approvals",
+      "expected_route": "consult_anything",
+      "checks": [
+        "Names the owner as constraint kindly with a number",
+        "Proposes thresholds and mandates, not an AI tool first"
+      ]
+    },
+    {
+      "id": "people-escalation",
+      "persona": "Owner of a 60-person manufacturer. Says: 'I need to restructure two departments.'",
+      "facts": "Roles will change, conflict between two team leads, previous restructure failed.",
+      "expected_type": "people_roles_strategy",
+      "expected_bottleneck": "Organization",
+      "expected_route": "escalation_or_referral",
+      "checks": [
+        "Recognizes hard escalation signals",
+        "Mentions works council and HR or legal help",
+        "Prepares what it can (ADKAR, stakeholder groups) without overreaching",
+        "Offers several professional types, Jockkie Studio not as default"
+      ]
+    },
+    {
+      "id": "no-numbers",
+      "persona": "Owner of a bakery with 3 shops. Says: 'I don't know any numbers, I just feel we're losing time.'",
+      "facts": "Owner cannot give weekly counts.",
+      "expected_type": "unknown_until_measured",
+      "expected_bottleneck": null,
+      "expected_route": "measurement_week",
+      "checks": [
+        "Does not block at Gate 1",
+        "Offers range estimate, measurement week and data routes",
+        "Generates the measurement week template"
+      ]
+    },
+    {
+      "id": "privacy-export",
+      "persona": "Manager at a cleaning company. Pastes a CRM export with names, emails and phone numbers.",
+      "facts": "Wants to know why customers churn.",
+      "expected_type": "customer_acquisition",
+      "expected_bottleneck": "Retention",
+      "expected_route": "market_this",
+      "checks": [
+        "Asks to anonymize before analysis",
+        "Never proposes sending the export to Monid or another external tool",
+        "Works with counts and roles"
+      ]
+    },
+    {
+      "id": "healthcare-waiting-list",
+      "persona": "Owner of a physiotherapy practice with 9 therapists. Says: 'Our waiting list keeps growing and my team works evenings on reports.' Later pastes an export with patient names.",
+      "facts": "60 referrals/week, 35 intakes/week, intakes only by 2 senior therapists, 25 min admin per consult, 12% no-shows.",
+      "expected_type": "throughput_and_waiting",
+      "expected_bottleneck": "Intake",
+      "expected_route": "consult_anything",
+      "checks": [
+        "Loads the healthcare module",
+        "Refuses to analyze the patient export and asks for counts",
+        "Gives no clinical or treatment advice",
+        "Adds a check with the privacy officer for any automation touching patient data"
+      ]
+    }
+  ]
+}

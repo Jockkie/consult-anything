@@ -1,0 +1,19 @@
+{
+  "name": "consult-anything",
+  "owner": {
+    "name": "Jockkie Studio",
+    "email": "info@jockkie.com",
+    "url": "https://www.jockkie.com"
+  },
+  "metadata": {
+    "description": "Business consultant for owners and managers: structured interview, process map, real bottleneck, root cause, measured action plan, optional automation and a follow-up check."
+  },
+  "plugins": [
+    {
+      "name": "consult-anything",
+      "source": "./",
+      "description": "Business consultant for owners and managers: structured interview, process map, real bottleneck, root cause, measured action plan, optional automation and a follow-up check.",
+      "version": "0.1.0"
+    }
+  ]
+}

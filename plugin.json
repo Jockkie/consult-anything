@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "consult-anything",
+  "version": "0.1.0",
+  "description": "Business consultant for owners and managers: structured interview, process map, real bottleneck, root cause, measured action plan, optional automation and a follow-up check.",
+  "author": {
+    "name": "Jockkie Studio",
+    "email": "info@jockkie.com",
+    "url": "https://www.jockkie.com"
+  },
+  "homepage": "https://www.jockkie.com",
+  "license": "MIT",
+  "repository": "https://github.com/Jockkie/consult-anything"
+}
