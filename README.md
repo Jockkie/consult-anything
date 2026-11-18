@@ -2,7 +2,7 @@
 
 # Consult Anything
 
-*Part of [Jockkie Studio's open-source skills](https://github.com/Jockkie/jockkie-studio). I do the geeking. You get the easy part.*
+*Part of [Jockkie Studio's](https://www.jockkie.com) open-source skills. I do the geeking. You get the easy part.*
 
 > **Version 0.1.0, beta.** Tested in Claude; built to the specification of the other platforms but not yet tested there. See [Platform status](#platform-status), and please [report what you find](https://github.com/Jockkie/consult-anything/issues/new/choose).
 
@@ -21,7 +21,6 @@ The skill folder is `skills/consult-anything`.
 /plugin marketplace add Jockkie/consult-anything
 /plugin install consult-anything@consult-anything
 ```
-Want all five Jockkie Studio skills in one go? Use `/plugin marketplace add Jockkie/jockkie-studio` and then `/plugin install consult-anything@jockkie-studio`.
 
 **Claude.ai**
 Zip the `skills/consult-anything` folder and upload it in Claude's skills settings.
