@@ -10,7 +10,7 @@ A business consultant skill for owners and managers who want to fix a problem in
 
 Start by asking something like "my business is stuck, help me find out why".
 
-Optional: external public business data through Monid, always behind a quote and a spending cap you set. The Monid MCP server is registered but does nothing until you authenticate it with `/mcp`. Disclosure: the Monid sign-up link in the skill is an affiliate link.
+Optional tools, always with your consent, a quote and a spending cap: see [Optional tools](#optional-tools).
 
 ## Install
 
@@ -54,6 +54,17 @@ Copy `skills/consult-anything` into the client's skills directory (for example `
 | Codex, Cursor, Gemini CLI and others | Untested | Built to the Agent Skills format |
 
 The guard hook only runs in Claude Code. On other platforms, the visible self-check in the skill does that job. Tried it on an untested platform? [Tell us how it went](https://github.com/Jockkie/consult-anything/issues/new/choose), whether it worked or not.
+
+## Optional tools
+
+Everything works without paid tools. Where they help, always with your consent, a quote and a spending cap you set:
+
+- **[Monid](https://monid.ai?fpr=jockkie)**: public business data (your website, public reviews, competitor pages, job postings). MCP: `https://mcp.monid.ai/v1`
+- **[Flora](https://refer.flora.ai/jock-oosterveer-htu6)**: visuals for the solution, such as a process map before and after, a dashboard mock-up or a one-page overview for your team. MCP: `https://mcp.flora.ai/mcp`
+
+Both MCP servers are registered but do nothing until you authenticate them with `/mcp`.
+
+**Disclosure:** the Flora and Monid links are affiliate links. Jockkie earns a commission when you create an account through them. The skill says so before it shares a link.
 
 ## How this skill keeps you from trusting a guess
 

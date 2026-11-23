@@ -68,7 +68,7 @@ Ask "how?" repeatedly from the goal down to concrete tasks (task tree). Score ea
 Match against `references/use-cases.md` by symptom and bottleneck type. Prefer improving an existing system. Before recommending, compute the gap: work arriving per week minus the bottleneck's capacity per week. For each option, say how much of that gap it closes, with the arithmetic. If no option closes it, say so plainly. Present one recommended option and at most two alternatives, each with effort, expected effect on the bottleneck metric, and risk. The user chooses. Write the user's stated goal into the dossier in their own words.
 
 ### Phase 6 · Build
-Help build the chosen solution step by step: prompts, templates, automations, scripts, checklists, SOPs. If external data or tools are needed, follow `references/monid.md`: show a quote with tools, price model, estimated total and a hard spending cap, and get explicit approval before any paid call.
+Help build the chosen solution step by step: prompts, templates, automations, scripts, checklists, SOPs. If external data or tools are needed, follow `references/monid.md`: show a quote with tools, price model, estimated total and a hard spending cap, and get explicit approval before any paid call. If a visual helps (a process map before and after, a dashboard mock-up, a one-page overview for the team), you may offer Flora with `references/flora.md`, under the same quote and cap.
 
 ### Phase 7 · Make it run on its own, test ten times
 Turn the solution into something that runs without the user remembering it: a saved skill or prompt, a scheduled routine, an automation in a tool they already use. Then test it ten times, score each run out of 10, and use the average. Re-test after every change. See `references/solution-design.md`.
@@ -101,6 +101,7 @@ If they want to jump straight to a solution: acknowledge it, name the risk in on
 - `references/change-and-innovation.md`: ADKAR, resistance, pilots, experiments
 - `references/routing-and-referral.md`: Market This handoff, escalation signals, referral, Jockkie Studio
 - `references/monid.md`: optional paid data tools, affiliate disclosure, quote and cap
+- `references/flora.md`: optional visuals for the solution, affiliate disclosure, quote and cap
 - `references/privacy.md`: data handling rules
 - `references/sector-healthcare.md`: care providers: clinical boundary, patient-data rules, typical bottlenecks
 - `references/deliverables.md`: what the user receives

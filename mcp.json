@@ -4,6 +4,10 @@
     "monid": {
       "type": "streamable-http",
       "url": "https://mcp.monid.ai/v1"
+    },
+    "flora": {
+      "type": "streamable-http",
+      "url": "https://mcp.flora.ai/mcp"
     }
   }
 }
